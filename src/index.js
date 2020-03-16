@@ -1,6 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Routes from './Routes';
+import { AuthProvider } from './context/auth-context';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const MainApp = props => {
+    return(
+        <AuthProvider>
+            <Routes />
+        </AuthProvider>
+    );
+}
+
+ReactDOM.render(<MainApp />, document.getElementById('root'));
