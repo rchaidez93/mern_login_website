@@ -122,19 +122,19 @@ const useStyles = makeStyles(theme => ({
 
 const imgarray = [
   {
-    key: `url(https://source.unsplash.com/random)`,
+    key: `https://source.unsplash.com/random`,
     index: 0,
   },
   {
-    key: `url(https://source.unsplash.com/random)`,
+    key: `https://source.unsplash.com/random`,
     index: 1,
   },
   {
-    key: `url(https://source.unsplash.com/random)`,
+    key: `https://source.unsplash.com/random`,
     index: 2,
   },
   {
-    key: `url(https://source.unsplash.com/random)`,
+    key: `https://source.unsplash.com/random`,
     index: 3,
   },
 ];

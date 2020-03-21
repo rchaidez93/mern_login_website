@@ -1,14 +1,36 @@
 import history from './history';
+import axios from 'axios';
 
 
 export default class Authorize{
 
     login = (username, password) => {
-        history.replace("/callback");
+        console.log(username);
+        console.log(password);
+
+        axios.post("/users/authenticate", {
+            username: username,
+            password: password
+        }).then(response => {
+            const { data } = response;
+            if(data.authenticated) {
+                localStorage.setItem("user", username);
+                history.replace("/callback");
+            }
+
+        }).catch(err=> console.log(err));
     }
 
     handleAuth = () => {
-        history.replace('/authcheck');
+
+        if(localStorage.getItem("user") !== null){
+            let expiresAt = JSON.stringify((3600 * 1000 + new Date().getTime()));
+            localStorage.setItem('expiresAt', expiresAt);
+            history.replace('/authcheck');
+        }
+        else{
+            console.log("error");
+        }
     }
 
     isAuthenticated = () => {
@@ -20,6 +42,8 @@ export default class Authorize{
     }
 
     logout = () => {
+        localStorage.removeItem('user')
+        localStorage.removeItem('expiresAt')
         history.replace('/authcheck')
     }
 }
