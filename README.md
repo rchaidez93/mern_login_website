@@ -11,3 +11,10 @@
 
 ## Contact section View
 ![Contact](src/images/contact.PNG)
+
+## Login view
+![Login](src/images/login.PNG)
+
+## Dashboard View
+__Only authenticated users can access this page to upload or delete images__
+![Dashboard](src/images/dashboard.PNG)
