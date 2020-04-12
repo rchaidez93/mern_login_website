@@ -106,7 +106,7 @@ export default function FullScreenDialog(props) {
             >
               {images.map(img => (
                 <GridListTile key={img.id} cols={img.cols || 1}>
-                  <img className={classes.imageStyle} src={img.key}/>
+                  <img className={classes.imageStyle} alt="img" src={img.key}/>
                 </GridListTile>
               ))}
             </GridList>

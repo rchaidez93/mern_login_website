@@ -44,7 +44,7 @@ function Home() {
         {
           <img
             style={{ display: 'none' }}
-            src={`url(https://source.unsplash.com/random)`}
+            src={`https://source.unsplash.com/random`}
             alt="background"
           />
         }

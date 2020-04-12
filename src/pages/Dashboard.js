@@ -25,7 +25,6 @@ import BarChartIcon from '@material-ui/icons/BarChart';
 import CameraAltIcon from '@material-ui/icons/CameraAlt';
 import Checkbox from '@material-ui/core/Checkbox';
 import DropZone from '../components/DropZone';
-import axios from 'axios';
 import LockIcon from '@material-ui/icons/Lock';
 import { AuthContext } from '../context/auth-context';
 
@@ -239,14 +238,14 @@ export default function Dashboard() {
       category = "highFashion"
     }
 
-    // todo add images to db
+    // todo add images to db or cloud service
     for(const value in images){
 
     }
 
   };
 
-  // todo delete images from db
+  // todo delete images from db or cloud service
   const handleDelete = () => {
     
   };

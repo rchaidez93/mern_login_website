@@ -5,8 +5,6 @@ import axios from 'axios';
 export default class Authorize{
 
     login = (username, password) => {
-        console.log(username);
-        console.log(password);
 
         axios.post("/users/authenticate", {
             username: username,

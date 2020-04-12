@@ -16,7 +16,7 @@ const AuthCheck = () => {
             dispatch({type:"AUTHENTICATE_FAIL"});
             history.replace('/login');
         }
-    }, []);
+    });
 
     return (
         <>

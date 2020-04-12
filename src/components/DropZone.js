@@ -37,7 +37,7 @@ export default function DropZone({onUpload, onDelete, removeFiles}) {
 
     const onDrop = useCallback(acceptedFiles => {
         setImages([...images, ...acceptedFiles]);
-    });
+    }, []);
 
     const { acceptedFiles, getRootProps, getInputProps } = useDropzone({
         accept: 'image/jpeg, image/png',

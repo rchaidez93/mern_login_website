@@ -47,19 +47,19 @@ export default function Portfolio() {
     const [images, setImages] = useState([]);
 
     const handleClickOpen = (type) => {
-        let image_type= "";
+        let imgs = [];
         setType(type);
         setOpen(true);
-        if(type == 0){
-            image_type = "headShot";
-        }
-        else if(type == 1){
-            image_type = "bridal";
-        }
-        else{
-            image_type = "highFashion";
-        }
         
+        for(let i=0; i<8; i++){
+            imgs.push(
+                {
+                    key: `https://source.unsplash.com/random`,
+                    id: i
+                }
+            )
+        }
+        setImages(imgs);
       };
     
       const handleClose = () => {
